@@ -8,4 +8,4 @@ You have two sets A and T of not necessarily equal size, together with a weight 
 
 The way I'll be doing this will be to view this in terms of a bipartite graph. $A$ and $T$ make up the disjoint nodes of the two parts; the weight function $C$ defines the edges and weights between the nodes in $A$ and the nodes in $T$. Remember that in a bipartite graph, edges only exist between parts, not within parts.
 
-Gonna try to implement the Hungarian algorithm myself too
+Gonna try to implement the Hungarian algorithm to solve it

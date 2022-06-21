@@ -1,8 +1,15 @@
 # linear_sum_assignment
 Custom code to solve the linear sum assignment problem in the context of soldiers and countries.
-I got interested in this problem on the car ride back from a skiing trip while I was reading about all the ukraine stuff
+I got interested in this problem on the car ride back from a skiing trip while I was reading about all the ukraine stuff. The problem I thought of was:
 
-anyway, the problem (formally) is as follows:
+Suppose you're a country, and you want to station your soldiers in other countries.  
+You have a particular number of soldiers that you want to send to each country. Specifically, you want to send $n_1$ soldiers to country 1, $n_2$ soldiers to country 2, up to $n_m$ soldiers to country $m$. Your total number of soldiers, of course, is $\sum_{i=1}^m n_i$. You don't really care which soldiers go to which country as long as the total number is correct.
+
+However, the soldiers themselves have preferences. Specifically, each of them gives a ranking $P(\{1, 2, ..., m\})$ where $P: R^m \rightarrow R^m$ is a permutation function on the set $\{1, ..., m\}$. You would like each soldier to go to their rank-1 country if possible, and if that country is filled, to send the to their rank-2 country, and so on. Specifically, you would like to minimize the sum of the rankings across all soldiers, which means that they're as happy as possible with the country they got sent to.
+
+Now, I did a bit of research and asked a couple friends, and it turns out that this is (unsurprisingly) a somewhat solved problem. It's called the linear sum assignment problem, which has its own wikipedia article. 
+
+The problem (formally) is as follows:
 
 You have two sets A and T of not necessarily equal size, together with a weight function $C: A \times T \rightarrow R$. 
 
